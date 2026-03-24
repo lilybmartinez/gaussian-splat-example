@@ -1,60 +1,13 @@
 {
   "splats": [
     {
-      "filename": "boats-on-a-canal.spz",
+      "filename": "public/assets/fantasy-world/project-white-greek-butterfly-sanctuary/white-greek-butterfly-sanctuary.spz",
       "transform": {
-        "translation": [
-          0,
-          1.6629819869995117,
-          0
-        ],
-        "rotation": [
-          180,
-          0,
-          0
-        ],
-        "quaternion": [
-          1,
-          0,
-          0,
-          6.123233995736766e-17
-        ],
-        "scale": 1.5289697647094727
+        "translation": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "quaternion": [1, 0, 0, 0],
+        "scale": 3
       }
     }
-  ],
-  "meshes": [
-    {
-      "filename": "object_0glb.glb",
-      "originalFilename": "object_0.glb",
-      "mimeType": "model/gltf-binary",
-      "transform": {
-        "translation": [
-          -2.95,
-          1.84,
-          -3.13
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "quaternion": [
-          0,
-          0,
-          0,
-          1
-        ],
-        "scale": [
-          4,
-          4,
-          4
-        ]
-      }
-    }
-  ],
-  "metadata": {
-    "exportTimestamp": "2026-03-17T13:41:09.796Z",
-    "spzExportVersion": 3
-  }
+  ]
 }

@@ -101,9 +101,9 @@
 
     for (const splat of sceneData.splats ?? []) {
       const splatMesh = new SplatMesh({
-        url: `./${splat.filename}`,
-        lod: true,
+        url: "/public/assets/fantasy-world/project-white-greek-butterfly-sanctuary/white-greek-butterfly-sanctuary.spz"
       });
+
 
       splatMesh.position.fromArray(splat.transform?.translation ?? [0, 0, 0]);
       splatMesh.quaternion.fromArray(splat.transform?.quaternion ?? [0, 0, 0, 1]);
@@ -112,6 +112,16 @@
       splatMesh.scale.set(scale, scale, scale);
       scene.add(splatMesh);
     }
+
+    const butterfly = new SplatMesh({
+  url: "https://sparkjs.dev/assets/splats/butterfly.spz"
+});
+
+butterfly.position.set(0, 0.6, -2);
+butterfly.scale.set(0.5, 0.5, 0.5);
+butterfly.rotation.x = Math.PI;
+
+scene.add(butterfly);
 
     for (const mesh of sceneData.meshes ?? []) {
       try {
@@ -213,7 +223,7 @@
 
       visibilityToggleButton.textContent = audioMeshesVisible ? "Hide Audio Mesh" : "Show Audio Mesh";
     }
-
+ 
     toggleButton.addEventListener("click", () => {
       void toggleAudio();
     });
@@ -238,6 +248,7 @@
 
     renderer.setAnimationLoop(() => {
       controls.update(localFrame, camera);
+      butterfly.rotation.y += 0.01; 
       renderer.render(scene, camera);
     });
   </script>
